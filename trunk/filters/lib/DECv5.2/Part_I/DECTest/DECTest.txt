@@ -1,0 +1,507 @@
+registered classes
+
+E7431E88 : TFormat_HEX
+4F3E57C9 : TFormat_HEXL
+A408C019 : TFormat_MIME32
+C58C97AD : TFormat_MIME64
+6A16DCFD : TFormat_PGP
+4332539B : TFormat_UU
+04F6F50B : TFormat_XX
+557E403E : TFormat_ESCAPE
+5EC6A9D1 : THash_MD2
+089C0E57 : THash_MD4
+11873F16 : THash_MD5
+29DE5FB7 : THash_SHA
+8CAAC5D5 : THash_SHA1
+014889DB : THash_SHA256
+0A48E021 : THash_SHA384
+F743EB30 : THash_SHA512
+62F9C255 : THash_Sapphire
+10A07A60 : THash_Panama
+9919E48B : THash_Tiger
+B2C0C32A : THash_RipeMD128
+F57BDE75 : THash_RipeMD160
+3700A4B3 : THash_RipeMD256
+37D1E829 : THash_RipeMD320
+3BD8E9AE : THash_Haval128
+7C63F4F1 : THash_Haval160
+16368625 : THash_Haval192
+11F9D40C : THash_Haval224
+BE188E37 : THash_Haval256
+BC2B08EE : THash_Whirlpool
+12DC726A : THash_Whirlpool1
+0D5786C8 : THash_Square
+5350E69F : THash_Snefru128
+D6908106 : THash_Snefru256
+16319959 : TCipher_Blowfish
+4668B914 : TCipher_Twofish
+19A38386 : TCipher_IDEA
+6B2A3131 : TCipher_Cast256
+781E033A : TCipher_Mars
+81C028AE : TCipher_RC4
+B3F64A2C : TCipher_RC6
+88C55CCF : TCipher_Rijndael
+8224ED5C : TCipher_Square
+D5B95DA9 : TCipher_SCOP
+6D4C24E3 : TCipher_Sapphire
+1EE27970 : TCipher_1DES
+906D7E93 : TCipher_2DES
+5CC77E0D : TCipher_3DES
+D8CE5F5D : TCipher_2DDES
+370C3463 : TCipher_3DDES
+4BB70548 : TCipher_3TDES
+AC0871E5 : TCipher_3Way
+EEEA56A8 : TCipher_Cast128
+24298F20 : TCipher_Gost
+48107ECA : TCipher_Misty
+FD686CE3 : TCipher_NewDES
+E5076FF0 : TCipher_Q128
+D79A8F28 : TCipher_RC2
+98DB19EF : TCipher_RC5
+FAD8AE3D : TCipher_SAFER
+AE5C4390 : TCipher_Shark
+F69AB171 : TCipher_Skipjack
+20BA19DC : TCipher_TEA
+3DBBFF41 : TCipher_TEAN
+
+processing test cases
+
+    6: TFormat_HEX test ok.
+    7: TFormat_HEX test ok.
+   10: TFormat_HEXL test ok.
+   11: TFormat_HEXL test ok.
+   14: TFormat_MIME32 test ok.
+   15: TFormat_MIME32 test ok.
+   16: TFormat_MIME32 test ok.
+   17: TFormat_MIME32 test ok.
+   18: TFormat_MIME32 test ok.
+   19: TFormat_MIME32 test ok.
+   22: TFormat_MIME64 test ok.
+   23: TFormat_MIME64 test ok.
+   24: TFormat_MIME64 test ok.
+   25: TFormat_MIME64 test ok.
+   26: TFormat_MIME64 test ok.
+   27: TFormat_MIME64 test ok.
+   30: TFormat_PGP test ok.
+   31: TFormat_PGP test ok.
+   32: TFormat_PGP test ok.
+   33: TFormat_PGP test ok.
+   34: TFormat_PGP test ok.
+   35: TFormat_PGP test ok.
+   38: TFormat_XX test ok.
+   39: TFormat_XX test ok.
+   40: TFormat_XX test ok.
+   41: TFormat_XX test ok.
+   42: TFormat_XX test ok.
+   43: TFormat_XX test ok.
+   46: TFormat_UU test ok.
+   47: TFormat_UU test ok.
+   48: TFormat_UU test ok.
+   49: TFormat_UU test ok.
+   50: TFormat_UU test ok.
+   51: TFormat_UU test ok.
+   54: TFormat_ESCAPE test ok.
+   55: TFormat_ESCAPE test ok.
+   62: THash_MD4 test ok.
+   63: THash_MD4 test ok.
+   64: THash_MD4 test ok.
+   65: THash_MD4 test ok.
+   66: THash_MD4 test ok.
+   67: THash_MD4 test ok.
+   68: THash_MD4 test ok.
+   69: THash_MD4 test ok.
+   70: THash_MD4 test ok.
+   72: THash_MD4 test ok.
+   74: THash_MD4 test ok.
+   77: THash_MD5 test ok.
+   78: THash_MD5 test ok.
+   79: THash_MD5 test ok.
+   80: THash_MD5 test ok.
+   81: THash_MD5 test ok.
+   82: THash_MD5 test ok.
+   83: THash_MD5 test ok.
+   84: THash_MD5 test ok.
+   85: THash_MD5 test ok.
+   86: THash_MD5 test ok.
+   87: THash_MD5 test ok.
+   90: THash_RipeMD128 test ok.
+   91: THash_RipeMD128 test ok.
+   92: THash_RipeMD128 test ok.
+   93: THash_RipeMD128 test ok.
+   94: THash_RipeMD128 test ok.
+   95: THash_RipeMD128 test ok.
+   96: THash_RipeMD128 test ok.
+   97: THash_RipeMD128 test ok.
+   98: THash_RipeMD128 test ok.
+   99: THash_RipeMD128 test ok.
+  100: THash_RipeMD128 test ok.
+  101: THash_RipeMD128 test ok.
+  104: THash_RipeMD160 test ok.
+  105: THash_RipeMD160 test ok.
+  106: THash_RipeMD160 test ok.
+  107: THash_RipeMD160 test ok.
+  108: THash_RipeMD160 test ok.
+  109: THash_RipeMD160 test ok.
+  110: THash_RipeMD160 test ok.
+  111: THash_RipeMD160 test ok.
+  112: THash_RipeMD160 test ok.
+  113: THash_RipeMD160 test ok.
+  114: THash_RipeMD160 test ok.
+  115: THash_RipeMD160 test ok.
+  118: THash_RipeMD256 test ok.
+  119: THash_RipeMD256 test ok.
+  120: THash_RipeMD256 test ok.
+  121: THash_RipeMD256 test ok.
+  122: THash_RipeMD256 test ok.
+  123: THash_RipeMD256 test ok.
+  124: THash_RipeMD256 test ok.
+  125: THash_RipeMD256 test ok.
+  126: THash_RipeMD256 test ok.
+  127: THash_RipeMD256 test ok.
+  128: THash_RipeMD256 test ok.
+  129: THash_RipeMD256 test ok.
+  132: THash_RipeMD320 test ok.
+  133: THash_RipeMD320 test ok.
+  134: THash_RipeMD320 test ok.
+  135: THash_RipeMD320 test ok.
+  136: THash_RipeMD320 test ok.
+  137: THash_RipeMD320 test ok.
+  138: THash_RipeMD320 test ok.
+  139: THash_RipeMD320 test ok.
+  140: THash_RipeMD320 test ok.
+  141: THash_RipeMD320 test ok.
+  142: THash_RipeMD320 test ok.
+  143: THash_RipeMD320 test ok.
+  146: THash_SHA test ok.
+  147: THash_SHA test ok.
+  148: THash_SHA test ok.
+  149: THash_SHA test ok.
+  150: THash_SHA test ok.
+  151: THash_SHA test ok.
+  154: THash_SHA1 test ok.
+  155: THash_SHA1 test ok.
+  156: THash_SHA1 test ok.
+  157: THash_SHA1 test ok.
+  158: THash_SHA1 test ok.
+  159: THash_SHA1 test ok.
+  162: THash_SHA256 test ok.
+  163: THash_SHA256 test ok.
+  164: THash_SHA256 test ok.
+  165: THash_SHA256 test ok.
+  168: THash_SHA384 test ok.
+  169: THash_SHA384 test ok.
+  170: THash_SHA384 test ok.
+  171: THash_SHA384 test ok.
+  174: THash_SHA512 test ok.
+  175: THash_SHA512 test ok.
+  176: THash_SHA512 test ok.
+  177: THash_SHA512 test ok.
+  181: THash_Haval128 test ok.
+  182: THash_Haval128 test ok.
+  183: THash_Haval128 test ok.
+  184: THash_Haval128 test ok.
+  185: THash_Haval128 test ok.
+  186: THash_Haval128 test ok.
+  187: THash_Haval128 test ok.
+  188: THash_Haval128 test ok.
+  189: THash_Haval128 test ok.
+  191: THash_Haval128 test ok.
+  192: THash_Haval128 test ok.
+  193: THash_Haval128 test ok.
+  194: THash_Haval128 test ok.
+  195: THash_Haval128 test ok.
+  196: THash_Haval128 test ok.
+  197: THash_Haval128 test ok.
+  198: THash_Haval128 test ok.
+  199: THash_Haval128 test ok.
+  203: THash_Haval160 test ok.
+  204: THash_Haval160 test ok.
+  205: THash_Haval160 test ok.
+  206: THash_Haval160 test ok.
+  207: THash_Haval160 test ok.
+  208: THash_Haval160 test ok.
+  209: THash_Haval160 test ok.
+  210: THash_Haval160 test ok.
+  211: THash_Haval160 test ok.
+  213: THash_Haval160 test ok.
+  214: THash_Haval160 test ok.
+  215: THash_Haval160 test ok.
+  216: THash_Haval160 test ok.
+  217: THash_Haval160 test ok.
+  218: THash_Haval160 test ok.
+  219: THash_Haval160 test ok.
+  220: THash_Haval160 test ok.
+  221: THash_Haval160 test ok.
+  225: THash_Haval192 test ok.
+  226: THash_Haval192 test ok.
+  227: THash_Haval192 test ok.
+  228: THash_Haval192 test ok.
+  229: THash_Haval192 test ok.
+  230: THash_Haval192 test ok.
+  231: THash_Haval192 test ok.
+  232: THash_Haval192 test ok.
+  233: THash_Haval192 test ok.
+  235: THash_Haval192 test ok.
+  236: THash_Haval192 test ok.
+  237: THash_Haval192 test ok.
+  238: THash_Haval192 test ok.
+  239: THash_Haval192 test ok.
+  240: THash_Haval192 test ok.
+  241: THash_Haval192 test ok.
+  242: THash_Haval192 test ok.
+  243: THash_Haval192 test ok.
+  247: THash_Haval224 test ok.
+  248: THash_Haval224 test ok.
+  249: THash_Haval224 test ok.
+  250: THash_Haval224 test ok.
+  251: THash_Haval224 test ok.
+  252: THash_Haval224 test ok.
+  253: THash_Haval224 test ok.
+  254: THash_Haval224 test ok.
+  255: THash_Haval224 test ok.
+  257: THash_Haval224 test ok.
+  258: THash_Haval224 test ok.
+  259: THash_Haval224 test ok.
+  260: THash_Haval224 test ok.
+  261: THash_Haval224 test ok.
+  262: THash_Haval224 test ok.
+  263: THash_Haval224 test ok.
+  264: THash_Haval224 test ok.
+  265: THash_Haval224 test ok.
+  269: THash_Haval256 test ok.
+  270: THash_Haval256 test ok.
+  271: THash_Haval256 test ok.
+  272: THash_Haval256 test ok.
+  273: THash_Haval256 test ok.
+  274: THash_Haval256 test ok.
+  275: THash_Haval256 test ok.
+  276: THash_Haval256 test ok.
+  277: THash_Haval256 test ok.
+  278: THash_Haval256 test ok.
+  280: THash_Haval256 test ok.
+  281: THash_Haval256 test ok.
+  282: THash_Haval256 test ok.
+  283: THash_Haval256 test ok.
+  284: THash_Haval256 test ok.
+  285: THash_Haval256 test ok.
+  286: THash_Haval256 test ok.
+  287: THash_Haval256 test ok.
+  288: THash_Haval256 test ok.
+  289: THash_Haval256 test ok.
+  293: THash_Tiger test ok.
+  294: THash_Tiger test ok.
+  295: THash_Tiger test ok.
+  296: THash_Tiger test ok.
+  297: THash_Tiger test ok.
+  298: THash_Tiger test ok.
+  299: THash_Tiger test ok.
+  300: THash_Tiger test ok.
+  301: THash_Tiger test ok.
+  303: THash_Tiger test ok.
+  304: THash_Tiger test ok.
+  305: THash_Tiger test ok.
+  306: THash_Tiger test ok.
+  307: THash_Tiger test ok.
+  308: THash_Tiger test ok.
+  309: THash_Tiger test ok.
+  310: THash_Tiger test ok.
+  311: THash_Tiger test ok.
+  314: THash_Panama test ok.
+  315: THash_Panama test ok.
+  316: THash_Panama test ok.
+  317: THash_Panama test ok.
+  318: THash_Panama test ok.
+  319: THash_Panama test ok.
+  320: THash_Panama test ok.
+  323: THash_Whirlpool test ok.
+  324: THash_Whirlpool test ok.
+  325: THash_Whirlpool test ok.
+  326: THash_Whirlpool test ok.
+  327: THash_Whirlpool test ok.
+  328: THash_Whirlpool test ok.
+  329: THash_Whirlpool test ok.
+  330: THash_Whirlpool test ok.
+  331: THash_Whirlpool test ok.
+  332: THash_Whirlpool test ok.
+  333: THash_Whirlpool test ok.
+  334: THash_Whirlpool test ok.
+  337: THash_Whirlpool1 test ok.
+  338: THash_Whirlpool1 test ok.
+  339: THash_Whirlpool1 test ok.
+  340: THash_Whirlpool1 test ok.
+  341: THash_Whirlpool1 test ok.
+  342: THash_Whirlpool1 test ok.
+  343: THash_Whirlpool1 test ok.
+  344: THash_Whirlpool1 test ok.
+  345: THash_Whirlpool1 test ok.
+  346: THash_Whirlpool1 test ok.
+  347: THash_Whirlpool1 test ok.
+  348: THash_Whirlpool1 test ok.
+  351: THash_Square test ok.
+  352: THash_Square test ok.
+  353: THash_Square test ok.
+  354: THash_Square test ok.
+  355: THash_Square test ok.
+  356: THash_Square test ok.
+  357: THash_Square test ok.
+  358: THash_Square test ok.
+  359: THash_Square test ok.
+  363: THash_Snefru128 test ok.
+  364: THash_Snefru128 test ok.
+  365: THash_Snefru128 test ok.
+  366: THash_Snefru128 test ok.
+  367: THash_Snefru128 test ok.
+  368: THash_Snefru128 test ok.
+  369: THash_Snefru128 test ok.
+  370: THash_Snefru128 test ok.
+  371: THash_Snefru128 test ok.
+  372: THash_Snefru128 test ok.
+  373: THash_Snefru128 test ok.
+  374: THash_Snefru128 test ok.
+  375: THash_Snefru128 test ok.
+  376: THash_Snefru128 test ok.
+  377: THash_Snefru128 test ok.
+  378: THash_Snefru128 test ok.
+  379: THash_Snefru128 test ok.
+  382: THash_Snefru256 test ok.
+  383: THash_Snefru256 test ok.
+  384: THash_Snefru256 test ok.
+  385: THash_Snefru256 test ok.
+  386: THash_Snefru256 test ok.
+  387: THash_Snefru256 test ok.
+  388: THash_Snefru256 test ok.
+  389: THash_Snefru256 test ok.
+  390: THash_Snefru256 test ok.
+  391: THash_Snefru256 test ok.
+  392: THash_Snefru256 test ok.
+  393: THash_Snefru256 test ok.
+  394: THash_Snefru256 test ok.
+  395: THash_Snefru256 test ok.
+  399: THash_Sapphire test ok.
+  400: THash_Sapphire test ok.
+  402: THash_Sapphire test ok.
+  403: THash_Sapphire test ok.
+  405: THash_Sapphire test ok.
+  406: THash_Sapphire test ok.
+  408: THash_Sapphire test ok.
+  409: THash_Sapphire test ok.
+  411: THash_Sapphire test ok.
+  412: THash_Sapphire test ok.
+  414: THash_Sapphire test ok.
+  415: THash_Sapphire test ok.
+  417: THash_Sapphire test ok.
+  418: THash_Sapphire test ok.
+  419: THash_Sapphire test ok.
+  420: THash_Sapphire test ok.
+  421: THash_Sapphire test ok.
+  422: THash_Sapphire test ok.
+  423: THash_Sapphire test ok.
+  433: TCipher_Rijndael test ok.
+  438: TCipher_Rijndael test ok.
+  443: TCipher_Rijndael test ok.
+  450: TCipher_Blowfish test ok.
+  457: TCipher_Twofish test ok.
+  464: TCipher_IDEA test ok.
+  471: TCipher_Cast256 test ok.
+  478: TCipher_Mars test ok.
+  485: TCipher_RC4 test ok.
+  492: TCipher_RC6 test ok.
+  499: TCipher_Square test ok.
+  506: TCipher_SCOP test ok.
+  513: TCipher_Sapphire test ok.
+  520: TCipher_1DES test ok.
+  527: TCipher_2DES test ok.
+  534: TCipher_3DES test ok.
+  541: TCipher_2DDES test ok.
+  548: TCipher_3DDES test ok.
+  555: TCipher_3TDES test ok.
+  562: TCipher_3Way test ok.
+  569: TCipher_Cast128 test ok.
+  576: TCipher_Gost test ok.
+  583: TCipher_Misty test ok.
+  590: TCipher_NewDES test ok.
+  597: TCipher_Q128 test ok.
+  604: TCipher_RC2 test ok.
+  611: TCipher_RC5 test ok.
+  618: TCipher_SAFER test ok.
+  625: TCipher_Shark test ok.
+  632: TCipher_Skipjack test ok.
+  639: TCipher_TEA test ok.
+  646: TCipher_TEAN test ok.
+
+compute hash performances
+
+THash_MD2           :      285.3 cycles/byte       5.14 Mb/sec
+THash_MD4           :        3.3 cycles/byte     441.74 Mb/sec
+THash_MD5           :        5.7 cycles/byte     255.94 Mb/sec
+THash_SHA           :       10.9 cycles/byte     134.75 Mb/sec
+THash_SHA1          :       11.1 cycles/byte     132.36 Mb/sec
+THash_SHA256        :       20.0 cycles/byte      73.27 Mb/sec
+THash_SHA384        :       44.6 cycles/byte      32.88 Mb/sec
+THash_SHA512        :       44.6 cycles/byte      32.88 Mb/sec
+THash_Sapphire      :       30.3 cycles/byte      48.36 Mb/sec
+THash_Panama        :        6.0 cycles/byte     242.95 Mb/sec
+THash_Tiger         :       15.3 cycles/byte      95.72 Mb/sec
+THash_RipeMD128     :        9.5 cycles/byte     153.63 Mb/sec
+THash_RipeMD160     :       13.4 cycles/byte     109.72 Mb/sec
+THash_RipeMD256     :        9.0 cycles/byte     162.52 Mb/sec
+THash_RipeMD320     :       12.9 cycles/byte     113.71 Mb/sec
+THash_Haval128      :        7.2 cycles/byte     202.45 Mb/sec
+THash_Haval160      :        7.9 cycles/byte     186.44 Mb/sec
+THash_Haval192      :       13.1 cycles/byte     111.83 Mb/sec
+THash_Haval224      :       13.1 cycles/byte     112.17 Mb/sec
+THash_Haval256      :       14.5 cycles/byte     101.14 Mb/sec
+THash_Whirlpool     :       69.3 cycles/byte      21.17 Mb/sec
+THash_Whirlpool1    :       66.9 cycles/byte      21.92 Mb/sec
+THash_Square        :       36.4 cycles/byte      40.29 Mb/sec
+THash_Snefru128     :       80.6 cycles/byte      18.20 Mb/sec
+THash_Snefru256     :      124.8 cycles/byte      11.75 Mb/sec
+
+compute cipher performances
+
+TCipher_Blowfish    :       25.9 cycles/byte      56.64 Mb/sec
+TCipher_Twofish     :       40.3 cycles/byte      36.33 Mb/sec
+TCipher_IDEA        :       57.6 cycles/byte      25.47 Mb/sec
+TCipher_Cast256     :       55.9 cycles/byte      26.20 Mb/sec
+TCipher_Mars        :       54.0 cycles/byte      27.17 Mb/sec
+TCipher_RC4         :       14.6 cycles/byte     100.32 Mb/sec
+TCipher_RC6         :       18.4 cycles/byte      79.85 Mb/sec
+TCipher_Rijndael    :       39.4 cycles/byte      37.21 Mb/sec
+TCipher_Square      :       21.6 cycles/byte      67.96 Mb/sec
+TCipher_SCOP        :        5.1 cycles/byte     288.18 Mb/sec
+TCipher_Sapphire    :       45.4 cycles/byte      32.31 Mb/sec
+TCipher_1DES        :       58.8 cycles/byte      24.92 Mb/sec
+TCipher_2DES        :      178.5 cycles/byte       8.21 Mb/sec
+TCipher_3DES        :      180.7 cycles/byte       8.11 Mb/sec
+TCipher_2DDES       :      175.3 cycles/byte       8.36 Mb/sec
+TCipher_3DDES       :      173.2 cycles/byte       8.46 Mb/sec
+TCipher_3TDES       :      170.9 cycles/byte       8.58 Mb/sec
+TCipher_3Way        :       66.5 cycles/byte      22.05 Mb/sec
+TCipher_Cast128     :       47.8 cycles/byte      30.68 Mb/sec
+TCipher_Gost        :       74.3 cycles/byte      19.74 Mb/sec
+TCipher_Misty       :       95.2 cycles/byte      15.40 Mb/sec
+TCipher_NewDES      :       36.1 cycles/byte      40.65 Mb/sec
+TCipher_Q128        :       24.5 cycles/byte      59.76 Mb/sec
+TCipher_RC2         :      111.7 cycles/byte      13.12 Mb/sec
+TCipher_RC5         :       24.3 cycles/byte      60.36 Mb/sec
+TCipher_SAFER       :      140.9 cycles/byte      10.40 Mb/sec
+TCipher_Shark       :       31.8 cycles/byte      46.14 Mb/sec
+TCipher_Skipjack    :      116.6 cycles/byte      12.58 Mb/sec
+TCipher_TEA         :       33.0 cycles/byte      44.41 Mb/sec
+TCipher_TEAN        :       34.3 cycles/byte      42.73 Mb/sec
+
+
+Demo Cipher #0
+encoded: uqtaSk8yd+JXIWBGViraTA==
+decoded: Secret data here
+
+Demo Cipher #1
+encoded: r3uCEqsDPp0Y7/NgWsy6pg==
+decoded: Secret data here
+
+Demo Cipher #2
+encoded: sUmTrrC5xFkme8e0kX/UPg==
+decoded: Secret data here
+
+File En/Decryption test
+Cannot open file "C:\ProgettiMiei\DataSnapFilters\filters\lib\DECv5.2\Part_I\DECTest\DECTest.test". Impossibile trovare il file specificato
