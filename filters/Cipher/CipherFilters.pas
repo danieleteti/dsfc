@@ -123,7 +123,8 @@ end;
 function TAbstractCipherFilter.GetParameters: TDBXStringArray;
 begin
   SetLength(Result,1);
-  Result[0] := GetCryptKey;
+//  Result[0] := GetCryptKey;
+  Result[0] := CRYPT_KEY_PROPERTY_NAME;
 end;
 
 function TAbstractCipherFilter.GetParameterValue(
@@ -156,7 +157,7 @@ function TAbstractCipherFilter.SetParameterValue(const ParamName,
   ParamValue: UnicodeString): Boolean;
 begin
   Result := False;
-  if ParamName = 'crypt_key' then
+  if ParamName = CRYPT_KEY_PROPERTY_NAME then
   begin
     FCryptKey := ParamValue;
     DECCipher.Done;
