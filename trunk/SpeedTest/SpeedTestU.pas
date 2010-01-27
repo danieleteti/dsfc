@@ -1,11 +1,11 @@
-unit SpeedTestU;
+﻿unit SpeedTestU;
 
 interface
 
 uses
   SysUtils,
   DBXTransport,
-  DbxCompressionFilter;
+  DbxCompressionFilter, RTTI;
 
 const
   HOW_MANY_TIMES = 1000;
@@ -106,13 +106,13 @@ var
   sw: TStopwatch;
   I: Integer;
   InDataSize, OutDataSize: Int64;
+  ctx: TRTTIContext;
 begin
   sw := TStopwatch.Create;
   for FilterName in CIPHER_FILTERS do
   begin
     tf := TTransportFilterFactory.CreateFilter(FilterName);
     try
-      tf.SetParameterValue(CRYPT_KEY_PROPERTY_NAME, 'hello world, how are you');
       sw.Start;
       for I := 1 to HOW_MANY_TIMES do
         AtomicTest(tf, InDataSize, OutDataSize);

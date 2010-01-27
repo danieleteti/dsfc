@@ -1,6 +1,6 @@
 {**************************************************************************************************}
 {                                                                                                  }
-{ DataSnap Filters Compendium                                                                      }
+{ DataSnap Filters Compendium                                          }
 {                                                                                                  }
 { The contents of this file are subject to the Mozilla Public License Version 1.1 (the "License"); }
 { you may not use this file except in compliance with the License. You may obtain a copy of the    }
@@ -19,60 +19,54 @@
 {                                                                                                  }
 {**************************************************************************************************}
 
-program DSFCSpeedTest;
-{$APPTYPE CONSOLE}
+unit lzo;
+
+interface
+
+type
+  TLZO = class
+    class function Compress(Data: RawByteString): RawByteString;
+    class function DeCompress(Data: RawByteString): RawByteString;
+  end;
+
+implementation
 
 uses
-  SysUtils,
-  CompressFilters in '..\filters\Compress\CompressFilters.pas',
-  CipherFilters in '..\filters\Cipher\CipherFilters.pas',
-  HashFilters in '..\filters\Hash\HashFilters.pas',
-  lzo in '..\filters\lib\lzo.pas',
-  DSFCCommons in '..\filters\lib\DSFCCommons.pas',
-  SpeedTestU in 'SpeedTestU.pas';
+  Windows,
+  SysUtils;
 
+{$I lzo.inc}
+
+{ TLZO }
+
+class function TLZO.Compress(Data: RawByteString): RawByteString;
 var
-  st: TDSFCSpeedTest;
-
-procedure Logo;
+  OutData: PByteArray;
+  l: Cardinal;
 begin
-  WriteLn('DataSnap Filters Compendium - SPEED TEST');
-  WriteLn('Copyright 2009 - Daniele Teti - http://www.danieleteti.it');
-  WriteLn('---------------------------------------------------------');
-
+  OutData := GetMemory(100 + Length(Data) * 2);
+  try
+    l := LZOCompress(Data[1], OutData^, Length(Data));
+    SetLength(Result, l);
+    CopyMemory(@Result[1], OutData, l);
+  finally
+    FreeMem(OutData);
+  end;
 end;
 
-const
-  CRYPT = 'Hello World';
-
+class function TLZO.DeCompress(Data: RawByteString): RawByteString;
+var
+  OutData: PByteArray;
+  l: Cardinal;
 begin
-  TBlowfishFilter.CryptKey := CRYPT;
-  T3TDESFilter.CryptKey := CRYPT;
-  T3DESFilter.CryptKey := CRYPT;
-  TRijndaelFilter.CryptKey := CRYPT;
-
-
-  Logo;
+  OutData := GetMemory(100 + Length(Data) * 2);
   try
-    st := TDSFCSpeedTest.Create;
-    try
-      WriteLn('== HASH FILTERS == ', HOW_MANY_TIMES , ' iterations');
-      st.TestHash;
-      WriteLn;
-      WriteLn('== CIPHER FILTERS == ', HOW_MANY_TIMES , ' iterations');
-      st.TestCipher;
-      WriteLn;
-      WriteLn('== COMPRESS FILTERS == ', HOW_MANY_TIMES , ' iterations');
-      st.TestCompress;
-      WriteLn;
-    finally
-      st.Free;
-    end;
-  except
-    on E: Exception do
-    begin
-      Writeln(E.ClassName, ': ', E.Message);
-    end;
+    l := lzodecompress(Data[1], OutData^);
+    SetLength(Result, l);
+    CopyMemory(@Result[1], OutData, l);
+  finally
+    FreeMem(OutData);
   end;
-  Write('Press return to continue...'); Readln;
+end;
+
 end.
