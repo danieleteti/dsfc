@@ -1,0 +1,60 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{8047B049-D29E-485E-A2F8-631B8E7B204F}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="UnitTest\DSFCTest.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="SpeedTest\DSFCSpeedTest.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="DataSnapFiltersCompendium.dproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="DSFCTest">
+			<MSBuild Projects="UnitTest\DSFCTest.dproj"/>
+		</Target>
+		<Target Name="DSFCTest:Clean">
+			<MSBuild Targets="Clean" Projects="UnitTest\DSFCTest.dproj"/>
+		</Target>
+		<Target Name="DSFCTest:Make">
+			<MSBuild Targets="Make" Projects="UnitTest\DSFCTest.dproj"/>
+		</Target>
+		<Target Name="DSFCSpeedTest">
+			<MSBuild Projects="SpeedTest\DSFCSpeedTest.dproj"/>
+		</Target>
+		<Target Name="DSFCSpeedTest:Clean">
+			<MSBuild Targets="Clean" Projects="SpeedTest\DSFCSpeedTest.dproj"/>
+		</Target>
+		<Target Name="DSFCSpeedTest:Make">
+			<MSBuild Targets="Make" Projects="SpeedTest\DSFCSpeedTest.dproj"/>
+		</Target>
+		<Target Name="DataSnapFiltersCompendium">
+			<MSBuild Projects="DataSnapFiltersCompendium.dproj"/>
+		</Target>
+		<Target Name="DataSnapFiltersCompendium:Clean">
+			<MSBuild Targets="Clean" Projects="DataSnapFiltersCompendium.dproj"/>
+		</Target>
+		<Target Name="DataSnapFiltersCompendium:Make">
+			<MSBuild Targets="Make" Projects="DataSnapFiltersCompendium.dproj"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="DSFCTest;DSFCSpeedTest;DataSnapFiltersCompendium"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="DSFCTest:Clean;DSFCSpeedTest:Clean;DataSnapFiltersCompendium:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="DSFCTest:Make;DSFCSpeedTest:Make;DataSnapFiltersCompendium:Make"/>
+		</Target>
+		<Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+	</Project>

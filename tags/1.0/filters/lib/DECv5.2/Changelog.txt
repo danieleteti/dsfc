@@ -1,0 +1,10 @@
+Version 5.2
+- Dec, 17th 2008 Bugfix:
+  Minor bugfix in CRC.pas for D2009 compiler, CRC Table
+  was not correctly initialized when compiling with D2009
+  and disabled optimizations
+- Updated to support D2009 and Unicode (see example)
+
+Version 5.1
+- Complete rewrite of Hagen Reddmann, several enhancements,
+  bugfixes and security issues have been fixed
