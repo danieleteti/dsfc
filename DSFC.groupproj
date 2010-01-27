@@ -3,13 +3,19 @@
 			<ProjectGuid>{8047B049-D29E-485E-A2F8-631B8E7B204F}</ProjectGuid>
 		</PropertyGroup>
 		<ItemGroup>
+			<Projects Include="DataSnapFiltersCompendium.dproj">
+				<Dependencies/>
+			</Projects>
 			<Projects Include="UnitTest\DSFCTest.dproj">
 				<Dependencies/>
 			</Projects>
 			<Projects Include="SpeedTest\DSFCSpeedTest.dproj">
 				<Dependencies/>
 			</Projects>
-			<Projects Include="DataSnapFiltersCompendium.dproj">
+			<Projects Include="Sample\Server\Server.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="Sample\Client\Client.dproj">
 				<Dependencies/>
 			</Projects>
 		</ItemGroup>
@@ -20,6 +26,15 @@
 				<Default.Personality/>
 			</BorlandProject>
 		</ProjectExtensions>
+		<Target Name="DataSnapFiltersCompendium">
+			<MSBuild Projects="DataSnapFiltersCompendium.dproj"/>
+		</Target>
+		<Target Name="DataSnapFiltersCompendium:Clean">
+			<MSBuild Targets="Clean" Projects="DataSnapFiltersCompendium.dproj"/>
+		</Target>
+		<Target Name="DataSnapFiltersCompendium:Make">
+			<MSBuild Targets="Make" Projects="DataSnapFiltersCompendium.dproj"/>
+		</Target>
 		<Target Name="DSFCTest">
 			<MSBuild Projects="UnitTest\DSFCTest.dproj"/>
 		</Target>
@@ -38,23 +53,32 @@
 		<Target Name="DSFCSpeedTest:Make">
 			<MSBuild Targets="Make" Projects="SpeedTest\DSFCSpeedTest.dproj"/>
 		</Target>
-		<Target Name="DataSnapFiltersCompendium">
-			<MSBuild Projects="DataSnapFiltersCompendium.dproj"/>
+		<Target Name="Server">
+			<MSBuild Projects="Sample\Server\Server.dproj"/>
 		</Target>
-		<Target Name="DataSnapFiltersCompendium:Clean">
-			<MSBuild Targets="Clean" Projects="DataSnapFiltersCompendium.dproj"/>
+		<Target Name="Server:Clean">
+			<MSBuild Targets="Clean" Projects="Sample\Server\Server.dproj"/>
 		</Target>
-		<Target Name="DataSnapFiltersCompendium:Make">
-			<MSBuild Targets="Make" Projects="DataSnapFiltersCompendium.dproj"/>
+		<Target Name="Server:Make">
+			<MSBuild Targets="Make" Projects="Sample\Server\Server.dproj"/>
+		</Target>
+		<Target Name="Client">
+			<MSBuild Projects="Sample\Client\Client.dproj"/>
+		</Target>
+		<Target Name="Client:Clean">
+			<MSBuild Targets="Clean" Projects="Sample\Client\Client.dproj"/>
+		</Target>
+		<Target Name="Client:Make">
+			<MSBuild Targets="Make" Projects="Sample\Client\Client.dproj"/>
 		</Target>
 		<Target Name="Build">
-			<CallTarget Targets="DSFCTest;DSFCSpeedTest;DataSnapFiltersCompendium"/>
+			<CallTarget Targets="DataSnapFiltersCompendium;DSFCTest;DSFCSpeedTest;Server;Client"/>
 		</Target>
 		<Target Name="Clean">
-			<CallTarget Targets="DSFCTest:Clean;DSFCSpeedTest:Clean;DataSnapFiltersCompendium:Clean"/>
+			<CallTarget Targets="DataSnapFiltersCompendium:Clean;DSFCTest:Clean;DSFCSpeedTest:Clean;Server:Clean;Client:Clean"/>
 		</Target>
 		<Target Name="Make">
-			<CallTarget Targets="DSFCTest:Make;DSFCSpeedTest:Make;DataSnapFiltersCompendium:Make"/>
+			<CallTarget Targets="DataSnapFiltersCompendium:Make;DSFCTest:Make;DSFCSpeedTest:Make;Server:Make;Client:Make"/>
 		</Target>
 		<Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 	</Project>
