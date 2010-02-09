@@ -48,10 +48,10 @@ object Form4: TForm4
     Text = 'mypassword'
   end
   object DSServer1: TDSServer
-    AutoStart = False
+    AutoStart = True
     HideDSAdmin = False
-    Left = 152
-    Top = 136
+    Left = 168
+    Top = 144
   end
   object DSServerClass1: TDSServerClass
     OnGetClass = DSServerClass1GetClass
@@ -64,11 +64,8 @@ object Form4: TForm4
     PoolSize = 0
     Server = DSServer1
     BufferKBSize = 32
-    Filters = <
-      item
-        FilterId = '3TDES'
-      end>
+    Filters = <>
     Left = 168
-    Top = 64
+    Top = 72
   end
 end

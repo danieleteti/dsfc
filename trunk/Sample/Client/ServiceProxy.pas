@@ -6,19 +6,23 @@ unit ServiceProxy;
 
 interface
 
-uses DBXCommon, DBXJSON, Classes, SysUtils, DB, SqlExpr, DBXDBReaders;
+uses DBXCommon, DBXClient, DBXJSON, Classes, SysUtils, DB, SqlExpr, DBXDBReaders, DBXJSONReflect;
 
 type
   TSampleServiceClient = class
   private
     FDBXConnection: TDBXConnection;
     FInstanceOwner: Boolean;
+    FMarshal:   TJSONMarshal;
+    FUnMarshal: TJSONUnMarshal;
     FEchoCommand: TDBXCommand;
+    FFilterIdCommand: TDBXCommand;
   public
     constructor Create(ADBXConnection: TDBXConnection); overload;
     constructor Create(ADBXConnection: TDBXConnection; AInstanceOwner: Boolean); overload;
     destructor Destroy; override;
     function Echo(Value: string): string;
+    function FilterId: string;
   end;
 
 implementation
@@ -35,6 +39,19 @@ begin
   FEchoCommand.Parameters[0].Value.SetWideString(Value);
   FEchoCommand.ExecuteUpdate;
   Result := FEchoCommand.Parameters[1].Value.GetWideString;
+end;
+
+function TSampleServiceClient.FilterId: string;
+begin
+  if FFilterIdCommand = nil then
+  begin
+    FFilterIdCommand := FDBXConnection.CreateCommand;
+    FFilterIdCommand.CommandType := TDBXCommandTypes.DSServerMethod;
+    FFilterIdCommand.Text := 'TSampleService.FilterId';
+    FFilterIdCommand.Prepare;
+  end;
+  FFilterIdCommand.ExecuteUpdate;
+  Result := FFilterIdCommand.Parameters[0].Value.GetWideString;
 end;
 
 
@@ -61,6 +78,7 @@ end;
 destructor TSampleServiceClient.Destroy;
 begin
   FreeAndNil(FEchoCommand);
+  FreeAndNil(FFilterIdCommand);
   inherited;
 end;
 

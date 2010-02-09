@@ -43,6 +43,7 @@ type
   TSampleService = class(TPersistent)
   public
     function Echo(Value: String): String;
+    function FilterId: String;
   end;
 
 var
@@ -68,7 +69,9 @@ begin
   T3TDESFilter.CryptKey := Edit1.Text;
   T3DESFilter.CryptKey := Edit1.Text;
   TRijndaelFilter.CryptKey := Edit1.Text;
+  TPC1Filter.CryptKey := Edit1.Text;
 
+  DSTCP.Stop;
   DSServer1.Stop;
   DSTCP.Filters.Clear;
   if RadioGroup1.ItemIndex > -1 then
@@ -96,6 +99,20 @@ begin
   if Length(Filters) > 0 then
     for filter in Filters do
       RadioGroup1.Items.Add(filter);
+
+  TBlowfishFilter.CryptKey := Edit1.Text;
+  T3TDESFilter.CryptKey := Edit1.Text;
+  T3DESFilter.CryptKey := Edit1.Text;
+  TRijndaelFilter.CryptKey := Edit1.Text;
+  TPC1Filter.CryptKey := Edit1.Text;
+end;
+
+function TSampleService.FilterId: String;
+begin
+  if Form4.RadioGroup1.ItemIndex >= 0 then
+    Result := Form4.RadioGroup1.Items[Form4.RadioGroup1.ItemIndex]
+  else
+    Result := '(none)';
 end;
 
 end.
