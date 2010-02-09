@@ -3,10 +3,10 @@ program Client;
 uses
   Forms,
   ClientMainForm in 'ClientMainForm.pas' {Form5},
-  ServiceProxy in 'ServiceProxy.pas',
   CipherFilters in '..\..\filters\Cipher\CipherFilters.pas',
   CompressFilters in '..\..\filters\Compress\CompressFilters.pas',
-  HashFilters in '..\..\filters\Hash\HashFilters.pas';
+  HashFilters in '..\..\filters\Hash\HashFilters.pas',
+  ServiceProxy in 'ServiceProxy.pas';
 
 {$R *.res}
 
