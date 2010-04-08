@@ -21,7 +21,7 @@
 			<Base>true</Base>
 		</PropertyGroup>
 		<PropertyGroup Condition="'$(Base)'!=''">
-			<DCC_DependencyCheckOutputName>C:\tp\bin\DataSnapFiltersCompendium.bpl</DCC_DependencyCheckOutputName>
+			<DCC_DependencyCheckOutputName>C:\Users\Public\Documents\RAD Studio\7.0\Bpl\DataSnapFiltersCompendium.bpl</DCC_DependencyCheckOutputName>
 			<DCC_ImageBase>00400000</DCC_ImageBase>
 			<DesignOnlyPackage>false</DesignOnlyPackage>
 			<DCC_UnitSearchPath>.\filters;.\filters\lib;.\filters\lib\DECv5.2\Part_I;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
@@ -58,12 +58,12 @@
 			<DCCReference Include="filters\Hash\HashFilters.pas"/>
 			<DCCReference Include="filters\Cipher\CipherFilters.pas"/>
 			<DCCReference Include="filters\Compress\CompressFilters.pas"/>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
 			<BuildConfiguration Include="Debug">
 				<Key>Cfg_2</Key>
 				<CfgParent>Base</CfgParent>
-			</BuildConfiguration>
-			<BuildConfiguration Include="Base">
-				<Key>Base</Key>
 			</BuildConfiguration>
 			<BuildConfiguration Include="Release">
 				<Key>Cfg_1</Key>

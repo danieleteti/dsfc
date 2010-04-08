@@ -69,7 +69,7 @@ begin
   T3TDESFilter.CryptKey := Edit1.Text;
   T3DESFilter.CryptKey := Edit1.Text;
   TRijndaelFilter.CryptKey := Edit1.Text;
-  TPC1Filter.CryptKey := Edit1.Text;
+//  TPC1Filter.CryptKey := Edit1.Text;
 
   DSTCP.Stop;
   DSServer1.Stop;
@@ -104,7 +104,7 @@ begin
   T3TDESFilter.CryptKey := Edit1.Text;
   T3DESFilter.CryptKey := Edit1.Text;
   TRijndaelFilter.CryptKey := Edit1.Text;
-  TPC1Filter.CryptKey := Edit1.Text;
+//  TPC1Filter.CryptKey := Edit1.Text;
 end;
 
 function TSampleService.FilterId: String;

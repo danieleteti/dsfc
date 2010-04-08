@@ -77,7 +77,7 @@ begin
   T3TDESFilter.CryptKey := Edit1.Text;
   T3DESFilter.CryptKey := Edit1.Text;
   TRijndaelFilter.CryptKey := Edit1.Text;
-  TPC1Filter.CryptKey := Edit1.Text;
+//  TPC1Filter.CryptKey := Edit1.Text;
 
   SQLConnection1.Open;
   proxy := TSampleServiceClient.Create(SQLConnection1.DBXConnection);
