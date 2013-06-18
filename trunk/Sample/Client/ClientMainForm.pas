@@ -16,7 +16,7 @@ uses
   DbxDatasnap,
   DB,
   SqlExpr,
-  ServiceProxy, StdCtrls, ExtCtrls;
+  ServiceProxy, StdCtrls, ExtCtrls, IPPeerClient, Data.DBXCommon;
 
 type
   TForm5 = class(TForm)
@@ -50,14 +50,22 @@ const
 var
   testData: array of String;
   x: TBytes;
-  testDataSize: array [0..6] of integer = (16, 32, 64, 128, 256, 512, 1024);
+  testDataSize: array [0 .. 6] of integer = (
+    16,
+    32,
+    64,
+    128,
+    256,
+    512,
+    1024
+  );
 
 procedure BuildTestData;
 var
   i: integer;
 begin
   SetLength(testData, Length(testDataSize));
-  for I := 0 to Length(testDataSize) - 1 do
+  for i := 0 to Length(testDataSize) - 1 do
   begin
     testData[i] := 'MyTestData0123456789!@#$%^&*(),.';
     while Length(testData[i]) < testDataSize[i] * 1024 do
@@ -65,11 +73,10 @@ begin
   end;
 end;
 
-
 procedure TForm5.Button1Click(Sender: TObject);
 var
   proxy: TSampleServiceClient;
-  ticks : int64;
+  ticks: int64;
   i, j, pass: integer;
   echoStr: String;
 begin
@@ -77,17 +84,17 @@ begin
   T3TDESFilter.CryptKey := Edit1.Text;
   T3DESFilter.CryptKey := Edit1.Text;
   TRijndaelFilter.CryptKey := Edit1.Text;
-//  TPC1Filter.CryptKey := Edit1.Text;
+  // TPC1Filter.CryptKey := Edit1.Text;
 
   SQLConnection1.Open;
   proxy := TSampleServiceClient.Create(SQLConnection1.DBXConnection);
   try
     Memo1.Lines.Add('Filter: ' + proxy.FilterId);
     Memo1.Lines.Add('===============================');
-    for I := 0 to Length(testData) - 1 do
+    for i := 0 to Length(testData) - 1 do
     begin
       pass := 0;
-      Memo1.Lines.Add('Test ' + IntToStr(I) + ': ' + IntToStr(Length(testData[i])));
+      Memo1.Lines.Add('Test ' + IntToStr(i) + ': ' + IntToStr(Length(testData[i])));
       ticks := GetTickCount;
       for j := 0 to testRepeat - 1 do
       begin

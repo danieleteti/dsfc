@@ -755,7 +755,7 @@ end;
 {$ENDIF}
 
 {$IFDEF VER_D3H}
-procedure ModuleUnload(Instance: Integer);
+procedure ModuleUnload(Instance: NativeInt);
 var // automaticaly deregistration/releasing
   I: Integer;
 begin
