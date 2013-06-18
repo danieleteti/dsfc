@@ -48,8 +48,6 @@ object Form4: TForm4
     Text = 'mypassword'
   end
   object DSServer1: TDSServer
-    AutoStart = True
-    HideDSAdmin = False
     Left = 168
     Top = 144
   end
@@ -63,7 +61,6 @@ object Form4: TForm4
   object DSTCP: TDSTCPServerTransport
     PoolSize = 0
     Server = DSServer1
-    BufferKBSize = 32
     Filters = <>
     Left = 168
     Top = 72

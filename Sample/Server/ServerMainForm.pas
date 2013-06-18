@@ -18,7 +18,7 @@ uses
   StdCtrls,
   CheckLst,
   ExtCtrls,
-  ActnList;
+  ActnList, IPPeerServer;
 
 type
   TForm4 = class(TForm)
