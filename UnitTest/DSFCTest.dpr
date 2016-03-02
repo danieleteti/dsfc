@@ -19,6 +19,7 @@
 {                                                                                                  }
 {**************************************************************************************************}
 
+// JCL_DEBUG_EXPERT_INSERTJDBG OFF
 program DSFCTest;
 
 {$IFDEF CONSOLE_TESTRUNNER}

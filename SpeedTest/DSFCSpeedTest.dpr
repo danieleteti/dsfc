@@ -19,6 +19,7 @@
 {                                                                                                  }
 {**************************************************************************************************}
 
+// JCL_DEBUG_EXPERT_INSERTJDBG OFF
 program DSFCSpeedTest;
 {$APPTYPE CONSOLE}
 
@@ -37,8 +38,8 @@ var
 procedure Logo;
 begin
   WriteLn('DataSnap Filters Compendium - SPEED TEST');
-  WriteLn('Copyright 2009 - Daniele Teti - http://www.danieleteti.it');
-  WriteLn('---------------------------------------------------------');
+  WriteLn('Copyright 2009-2016 - Daniele Teti - http://www.danieleteti.it');
+  WriteLn('--------------------------------------------------------------');
 
 end;
 

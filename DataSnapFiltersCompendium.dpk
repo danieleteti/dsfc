@@ -1,3 +1,4 @@
+// JCL_DEBUG_EXPERT_INSERTJDBG OFF
 package DataSnapFiltersCompendium;
 
 {$R *.res}
@@ -5,7 +6,7 @@ package DataSnapFiltersCompendium;
 {$ALIGN 8}
 {$ASSERTIONS ON}
 {$BOOLEVAL OFF}
-{$DEBUGINFO ON}
+{$DEBUGINFO OFF}
 {$EXTENDEDSYNTAX ON}
 {$IMPORTEDDATA ON}
 {$IOCHECKS ON}
