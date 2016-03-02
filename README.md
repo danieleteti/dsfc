@@ -1,7 +1,7 @@
 # Datasnap Filters Compendium
 
 ##What’s Datasnap Filters Compendium
-Datasnap Filters Compendium (DSFC) is a compendium of 9 filters for Datasnap 2010 now updated to Delphi XE4 Update1. The filters are divided into 3 groups:
+Datasnap Filters Compendium (DSFC) is a compendium of 9 filters for Datasnap (Win32 only). The library is compatible from Delphi 2010 to Delphi 10 Seattle. The filters are divided into 3 groups:
 
 ###HASH
 - MD5
